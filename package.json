@@ -1,0 +1,30 @@
+{
+  "name": "@failproofai/jev-policies",
+  "version": "0.2.0",
+  "private": false,
+  "type": "module",
+  "description": "The FailproofAI policy pack: a regex floor plus the 16 semantic (Jev) checks, shipped as a pack instead of compiled into the CLI.",
+  "license": "MIT",
+  "main": "index.ts",
+  "exports": {
+    ".": "./index.ts"
+  },
+  "files": [
+    "index.ts",
+    "policies",
+    "README.md",
+    "CHECKLIST.md",
+    "DECISIONS.md"
+  ],
+  "keywords": [
+    "failproofai",
+    "failproofai-policies",
+    "policy-pack",
+    "jev",
+    "agent-safety"
+  ],
+  "//": "The peer range keeps the -beta.0 suffix on purpose: a plain >=1.0.7 would EXCLUDE 1.0.7-beta.0, the build the semantic tier actually ships in, because npm semver admits a prerelease only when a comparator names that same x.y.z tuple. Verified under semver 6.3.1 and 7.8.5 — it admits 1.0.7-beta.0, 1.0.7 and every later stable, and refuses 1.0.7-alpha.0. Caveat: a later prerelease on a DIFFERENT tuple (1.0.8-beta.0, 1.1.0-beta.0) is not admitted, so widen this when the next beta line opens.",
+  "peerDependencies": {
+    "failproofai": ">=1.0.7-beta.0"
+  }
+}

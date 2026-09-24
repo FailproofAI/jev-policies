@@ -1,0 +1,6 @@
+# `publish` writes its three release assets here by default. They are uploaded,
+# not source — a rebuild must never show up as a staged change.
+dist-pack/
+# The single-file bundle `publish` builds from the sources before it hashes it.
+pack.mjs
+node_modules/
